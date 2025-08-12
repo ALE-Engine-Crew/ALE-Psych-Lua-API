@@ -2,6 +2,8 @@ package scripting.lua.callbacks;
 
 import scripting.haxe.ScriptLuaPresetBase;
 
+import flixel.FlxBasic;
+
 class LuaGlobal extends ScriptLuaPresetBase
 {
     override public function new(lua:LuaScript)
@@ -19,7 +21,7 @@ class LuaGlobal extends ScriptLuaPresetBase
 
         set('remove', function(tag:String)
         {
-            if (tagIs(tag, flixel.FlxBasic))
+            if (tagIs(tag, FlxBasic))
                 if (type == 'state')
                     FlxG.state.remove(getTag(tag));
                 else
@@ -28,11 +30,33 @@ class LuaGlobal extends ScriptLuaPresetBase
 
         set('insert', function(position:Int, tag:String)
         {
-            if (tagIs(tag, flixel.FlxBasic))
+            if (tagIs(tag, FlxBasic))
                 if (type == 'state')
                     FlxG.state.insert(position, getTag(tag));
                 else
                     FlxG.state.subState.insert(position, getTag(tag));
+        });
+
+        set('getObjectOrder', function(tag:String)
+        {
+            return type == 'state' ? FlxG.state.members.indexOf(getTag(tag)) : FlxG.state.subState.members.indexOf(getTag(tag));
+        });
+
+        set('setObjectOrder', function(tag:String, position:Int)
+        {
+            if (!tagIs(tag, FlxBasic))
+                return;
+
+            var object:FlxBasic = getTag(tag);
+
+            if (type == 'state')
+            {
+                FlxG.state.remove(object);
+                FlxG.state.insert(position, object);
+            } else {
+                FlxG.state.subState.remove(object);
+                FlxG.state.subState.insert(position, object);
+            }
         });
     }
 }

@@ -9,5 +9,9 @@ class LuaPreset
         new scripting.lua.callbacks.LuaGlobal(lua);
 
         new scripting.lua.callbacks.LuaReflect(lua);
+
+        new scripting.lua.callbacks.LuaCoolUtil(lua);
+
+        new scripting.lua.callbacks.LuaDeprecated(lua);
     }
 }
