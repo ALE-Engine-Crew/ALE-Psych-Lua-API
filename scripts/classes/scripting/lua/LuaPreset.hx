@@ -1,0 +1,13 @@
+package scripting.lua;
+
+class LuaPreset
+{
+    public function new(lua:LuaScript)
+    {
+        new scripting.lua.callbacks.LuaSprite(lua);
+
+        new scripting.lua.callbacks.LuaGlobal(lua);
+
+        new scripting.lua.callbacks.LuaReflect(lua);
+    }
+}
