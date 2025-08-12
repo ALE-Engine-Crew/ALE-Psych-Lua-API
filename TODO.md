@@ -1,12 +1,12 @@
 ## Variables
 
-- **Function_StopLua** -> `LuaUtils.Function_StopLua`
-- **Function_StopHScript** -> `LuaUtils.Function_StopHScript`
-- **Function_StopAll** -> `LuaUtils.Function_StopAll`
+- *[REMOVED]* **Function_StopLua** -> `LuaUtils.Function_StopLua`
+- *[REMOVED]* **Function_StopHScript** -> `LuaUtils.Function_StopHScript`
+- *[REMOVED]* **Function_StopAll** -> `LuaUtils.Function_StopAll`
 - **Function_Stop** -> `LuaUtils.Function_Stop`
 - **Function_Continue** -> `LuaUtils.Function_Continue`
-- **luaDebugMode** -> `false`
-- **luaDeprecatedWarnings** -> `true`
+- *[REMOVED]* **luaDebugMode** -> `false`
+- *[REMOVED]* **luaDeprecatedWarnings** -> `true`
 - **inChartEditor** -> `false`
 - **curBpm** -> `Conductor.bpm`
 - **bpm** -> `PlayState.SONG.bpm`
@@ -26,10 +26,10 @@
 - **week** -> `WeekData.weeksList[PlayState.storyWeek]`
 - **seenCutscene** -> `PlayState.seenCutscene`
 - **hasVocals** -> `PlayState.SONG.needsVoices`
-- **cameraX** -> `0`
-- **cameraY** -> `0`
-- **screenWidth** -> `FlxG.width`
-- **screenHeight** -> `FlxG.height`
+- *[REMOVED]* **cameraX** -> `0`
+- *[REMOVED]* **cameraY** -> `0`
+- *[DEPRECATED]* **screenWidth** -> `FlxG.width`
+- *[DEPRECATED]* **screenHeight** -> `FlxG.height`
 - **curSection** -> `0`
 - **curBeat** -> `0`
 - **curStep** -> `0`
@@ -42,7 +42,7 @@
 - **rating** -> `0`
 - **ratingName** -> `''`
 - **ratingFC** -> `''`
-- **version** -> `MainMenuState.psychEngineVersion.trim()`
+- **version** -> `CoolVars.engineVersion`
 - **inGameOver** -> `false`
 - **mustHitSection** -> `false`
 - **altAnim** -> `false`
@@ -94,59 +94,57 @@
 
 ## Functions
 
-- **getRunningScripts** -> `()`
-- **callScript** -> `(luaFile:String, funcName:String, ?args:Array<Dynamic> = null)`
-- **getGlobalFromScript** -> `(luaFile:String, global:String)`
-- **setGlobalFromScript** -> `(luaFile:String, global:String, val:Dynamic)`
-- **getGlobals** -> `(luaFile:String)`
-- **isRunning** -> `(luaFile:String)`
+- *[REMOVED]* **getRunningScripts** -> `()`
+- *[REMOVED]* **callScript** -> `(luaFile:String, funcName:String, ?args:Array<Dynamic> = null)`
+- *[REMOVED]* **getGlobalFromScript** -> `(luaFile:String, global:String)`
+- *[REMOVED]* **setGlobalFromScript** -> `(luaFile:String, global:String, val:Dynamic)`
+- *[REMOVED]* **getGlobals** -> `(luaFile:String)`
+- *[REMOVED]* **isRunning** -> `(luaFile:String)`
 - **setVar** -> `(varName:String, value:Dynamic)`
 - **getVar** -> `(varName:String)`
-- **addLuaScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false).`
-- **addHScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false)`
-- **removeLuaScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false)`
-- **removeHScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false)`
+- *[REMOVED]* **addLuaScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false)`
+- *[REMOVED]* **addHScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false)`
+- *[REMOVED]* **removeLuaScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false)`
+- *[REMOVED]* **removeHScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false)`
 - **loadSong** -> `(?name:String = null, ?difficultyNum:Int = -1)`
 - **loadGraphic** -> `(variable:String, image:String, ?gridX:Int = 0, ?gridY:Int = 0)`
 - **loadFrames** -> `(variable:String, image:String, spriteType:String = "sparrow")`
 - **getObjectOrder** -> `(obj:String)`
 - **setObjectOrder** -> `(obj:String, position:Int)`
 - **startTween** -> `(tag:String, vars:String, values:Any = null, duration:Float, options:Any = null)`
-- **doTweenX** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
-- **doTweenY** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
-- **doTweenAngle** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
-- **doTweenAlpha** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
-- **doTweenZoom** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **doTweenX** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **doTweenY** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **doTweenAngle** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **doTweenAlpha** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **doTweenZoom** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
 - **doTweenColor** -> `(tag:String, vars:String, targetColor:String, duration:Float, ease:String)`
-- **noteTweenX** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
-- **noteTweenY** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
-- **noteTweenAngle** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
-- **noteTweenDirection** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenX** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenY** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenAngle** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenDirection** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
 - **mouseClicked** -> `(button:String)`
 - **mousePressed** -> `(button:String)`
 - **mouseReleased** -> `(button:String)`
-- **noteTweenAngle** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
-- **noteTweenAlpha** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenAlpha** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
 - **cancelTween** -> `(tag:String)`
 - **runTimer** -> `(tag:String, time:Float = 1, loops:Int = 1)`
 - **cancelTimer** -> `(tag:String)`
-- **addScore** -> `(value:Int = 0)`
-- **addMisses** -> `(value:Int = 0)`
-- **addHits** -> `(value:Int = 0)`
-- **setScore** -> `(value:Int = 0)`
-- **setMisses** -> `(value:Int = 0)`
-- **setHits** -> `(value:Int = 0)`
-- **getScore** -> `()`
-- **getMisses** -> `()`
-- **getHits** -> `()`
-- **setHealth** -> `(value:Float = 0)`
-- **addHealth** -> `(value:Float = 0)`
-- **getHealth** -> `()`
-- **FlxColor** -> `(color:String)return FlxColor.fromString(color));`
-- **getColorFromName** -> `(color:String)return FlxColor.fromString(color));`
-- **getColorFromString** -> `(color:String)return FlxColor.fromString(color));`
-- **getColorFromHex** -> `(color:String)return FlxColor.fromString('#$color'));`
-- **addCharacterToList** -> `(name:String, type:String)`
+- *[REMOVED]* **addScore** -> `(value:Int = 0)`
+- *[REMOVED]* **addMisses** -> `(value:Int = 0)`
+- *[REMOVED]* **addHits** -> `(value:Int = 0)`
+- *[REMOVED]* **setScore** -> `(value:Int = 0)`
+- *[REMOVED]* **setMisses** -> `(value:Int = 0)`
+- *[REMOVED]* **setHits** -> `(value:Int = 0)`
+- *[REMOVED]* **getScore** -> `()`
+- *[REMOVED]* **getMisses** -> `()`
+- *[REMOVED]* **getHits** -> `()`
+- *[REMOVED]* **setHealth** -> `(value:Float = 0)`
+- *[REMOVED]* **addHealth** -> `(value:Float = 0)`
+- *[REMOVED]* **getHealth** -> `()`
+- **getColorFromName** -> `(color:String)`
+- **getColorFromString** -> `(color:String)`
+- **getColorFromHex** -> `(color:String)`
+- *[REMOVED]* **addCharacterToList** -> `(name:String, type:String)`
 - **precacheImage** -> `(name:String, ?allowGPU:Bool = true)`
 - **precacheSound** -> `(name:String)`
 - **precacheMusic** -> `(name:String)`
@@ -155,26 +153,26 @@
 - **endSong** -> `()`
 - **restartSong** -> `(?skipTransition:Bool = false)`
 - **exitSong** -> `(?skipTransition:Bool = false)`
-- **getSongPosition** -> `()`
-- **getCharacterX** -> `(type:String)`
-- **setCharacterX** -> `(type:String, value:Float)`
-- **getCharacterY** -> `(type:String)`
-- **setCharacterY** -> `(type:String, value:Float)`
+- *[REMOVED]* **getSongPosition** -> `()`
+- *[REMOVED]* **getCharacterX** -> `(type:String)`
+- *[REMOVED]* **setCharacterX** -> `(type:String, value:Float)`
+- *[REMOVED]* **getCharacterY** -> `(type:String)`
+- *[REMOVED]* **setCharacterY** -> `(type:String, value:Float)`
 - **cameraSetTarget** -> `(target:String)`
 - **cameraShake** -> `(camera:String, intensity:Float, duration:Float)`
 - **cameraFlash** -> `(camera:String, color:String, duration:Float,forced:Bool)`
 - **cameraFade** -> `(camera:String, color:String, duration:Float,forced:Bool)`
-- **setRatingPercent** -> `(value:Float)`
-- **setRatingName** -> `(value:String)`
-- **setRatingFC** -> `(value:String)`
-- **getMouseX** -> `(camera:String)`
-- **getMouseY** -> `(camera:String)`
-- **getMidpointX** -> `(variable:String)`
-- **getMidpointY** -> `(variable:String)`
-- **getGraphicMidpointX** -> `(variable:String)`
-- **getGraphicMidpointY** -> `(variable:String)`
-- **getScreenPositionX** -> `(variable:String, ?camera:String)`
-- **getScreenPositionY** -> `(variable:String, ?camera:String)`
+- *[REMOVED]* **setRatingPercent** -> `(value:Float)`
+- *[REMOVED]* **setRatingName** -> `(value:String)`
+- *[REMOVED]* **setRatingFC** -> `(value:String)`
+- *[DEPRECATED]* **getMouseX** -> `(camera:String)`
+- *[DEPRECATED]* **getMouseY** -> `(camera:String)`
+- *[DEPRECATED]* **getMidpointX** -> `(variable:String)`
+- *[DEPRECATED]* **getMidpointY** -> `(variable:String)`
+- *[DEPRECATED]* **getGraphicMidpointX** -> `(variable:String)`
+- *[DEPRECATED]* **getGraphicMidpointY** -> `(variable:String)`
+- *[DEPRECATED]* **getScreenPositionX** -> `(variable:String, ?camera:String)`
+- *[DEPRECATED]* **getScreenPositionY** -> `(variable:String, ?camera:String)`
 - **characterDance** -> `(character:String)`
 - **makeLuaSprite** -> `(tag:String, ?image:String = null, ?x:Float = 0, ?y:Float = 0)`
 - **makeAnimatedLuaSprite** -> `(tag:String, ?image:String = null, ?x:Float = 0, ?y:Float = 0, ?spriteType:String = "sparrow")`
@@ -185,24 +183,24 @@
 - **playAnim** -> `(obj:String, name:String, forced:Bool = false, ?reverse:Bool = false, ?startFrame:Int = 0)`
 - **addOffset** -> `(obj:String, anim:String, x:Float, y:Float)`
 - **setScrollFactor** -> `(obj:String, scrollX:Float, scrollY:Float)`
-- **addLuaSprite** -> `(tag:String, front:Bool = false)`
+- *[DEPRECATED]* **addLuaSprite** -> `(tag:String, front:Bool = false)`
 - **setGraphicSize** -> `(obj:String, x:Int, y:Int = 0, updateHitbox:Bool = true)`
 - **scaleObject** -> `(obj:String, x:Float, y:Float, updateHitbox:Bool = true)`
 - **updateHitbox** -> `(obj:String)`
 - **updateHitboxFromGroup** -> `(group:String, index:Int)`
-- **removeLuaSprite** -> `(tag:String, destroy:Bool = true)`
-- **luaSpriteExists** -> `(tag:String)`
+- *[DEPRECATED]* **removeLuaSprite** -> `(tag:String, destroy:Bool = true)`
+- *[REMOVED]* **luaSpriteExists** -> `(tag:String)`
 - **luaTextExists** -> `(tag:String)`
-- **luaSoundExists** -> `(tag:String)`
-- **setHealthBarColors** -> `(left:String, right:String)`
-- **setTimeBarColors** -> `(left:String, right:String)`
-- **setObjectCamera** -> `(obj:String, camera:String = '')`
+- *[REMOVED]* **luaSoundExists** -> `(tag:String)`
+- *[REMOVED]* **setHealthBarColors** -> `(left:String, right:String)`
+- *[REMOVED]* **setTimeBarColors** -> `(left:String, right:String)`
+- *[DEPRECATED]* **setObjectCamera** -> `(obj:String, camera:String = '')`
 - **setBlendMode** -> `(obj:String, blend:String = '')`
 - **screenCenter** -> `(obj:String, pos:String = 'xy')`
 - **objectsOverlap** -> `(obj1:String, obj2:String)`
 - **getPixelColor** -> `(obj:String, x:Int, y:Int)`
 - **startDialogue** -> `(dialogueFile:String, music:String = null)`
-- **startVideo** -> `(videoFile:String)`
+- *[REMOVED]* **startVideo** -> `(videoFile:String)`
 - **playMusic** -> `(sound:String, volume:Float = 1, loop:Bool = false)`
 - **playSound** -> `(sound:String, volume:Float = 1, ?tag:String = null)`
 - **stopSound** -> `(tag:String)`
@@ -217,14 +215,14 @@
 - **setSoundTime** -> `(tag:String, value:Float)`
 - **getSoundPitch** -> `(tag:String)`
 - **setSoundPitch** -> `(tag:String, value:Float, doPause:Bool = false)`
-- **setOnScripts** -> `(varName:String, arg:Dynamic, ?ignoreSelf:Bool = false, ?exclusions:Array<String> = null)`
-- **setOnHScript** -> `(varName:String, arg:Dynamic, ?ignoreSelf:Bool = false, ?exclusions:Array<String> = null)`
-- **setOnLuas** -> `(varName:String, arg:Dynamic, ?ignoreSelf:Bool = false, ?exclusions:Array<String> = null)`
-- **callOnScripts** -> `(funcName:String, ?args:Array<Dynamic> = null, ?ignoreStops=false, ?ignoreSelf:Bool = true, ?excludeScripts:Array<String> = null, ?excludeValues:Array<Dynamic> = null)`
-- **callOnLuas** -> `(funcName:String, ?args:Array<Dynamic> = null, ?ignoreStops=false, ?ignoreSelf:Bool = true, ?excludeScripts:Array<String> = null, ?excludeValues:Array<Dynamic> = null)`
-- **callOnHScript** -> `(funcName:String, ?args:Array<Dynamic> = null, ?ignoreStops=false, ?ignoreSelf:Bool = true, ?excludeScripts:Array<String> = null, ?excludeValues:Array<Dynamic> = null)`
-- **getModSetting** -> `(saveTag:String, ?modName:String = null)`
-- **close** -> `()`
+- *[MODIFIED]* **setOnScripts** -> `(varName:String, arg:Dynamic)`
+- *[MODIFIED]* **setOnHScript** -> `(varName:String, arg:Dynamic)`
+- *[MODIFIED]* **setOnLuas** -> `(varName:String, arg:Dynamic)`
+- *[MODIFIED]* **callOnScripts** -> `(funcName:String, ?args:Array<Dynamic> = null)`
+- **callOnLuas** -> `(funcName:String, ?args:Array<Dynamic> = null)`
+- **callOnHScript** -> `(funcName:String, ?args:Array<Dynamic> = null)`
+- *[DEPRECATED]* **getModSetting** -> `(saveTag:String, ?modName:String = null)`
+- *[REMOVED]* **close** -> `()`
 
 ---
 
