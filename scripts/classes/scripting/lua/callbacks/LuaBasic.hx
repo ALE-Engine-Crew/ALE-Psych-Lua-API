@@ -1,0 +1,28 @@
+package scripting.lua.callbacks;
+
+import scripting.haxe.ScriptLuaPresetBase;
+
+import scripting.lua.LuaPresetUtils;
+
+import flixel.FlxBasic;
+
+class LuaBasic extends ScriptLuaPresetBase
+{
+    override public function new(lua:LuaScript)
+    {
+        super(lua);
+
+        set('setObjectCameras', function(tag:String, cameras:Array<String>)
+        {
+            if (!tagIs(tag, FlxBasic))
+                return;
+
+            var foundCameras:Array<FlxCamera> = [];
+
+            for (camera in cameras)
+                foundCameras.push(LuaPresetUtils.cameraFromString(camera));
+
+            getTag(tag).cameras = foundCameras;
+        });
+    }
+}

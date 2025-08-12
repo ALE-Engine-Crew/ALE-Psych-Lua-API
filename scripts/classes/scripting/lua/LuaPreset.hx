@@ -12,6 +12,8 @@ class LuaPreset
 
         new scripting.lua.callbacks.LuaCoolUtil(lua);
 
+        new scripting.lua.callbacks.LuaBasic(lua);
+
         new scripting.lua.callbacks.LuaDeprecated(lua);
     }
 }

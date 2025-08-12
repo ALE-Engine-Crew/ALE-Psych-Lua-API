@@ -99,7 +99,7 @@ class LuaPresetUtils
 
                     var split:Array<String> = myArg.split('.');
 
-                    args[i] = (lastIndex > -1) ? Type.resolveClass(myArg.substring(0, lastIndex)) : ScriptState.instance;
+                    args[i] = (lastIndex > -1) ? Type.resolveClass(myArg.substring(0, lastIndex)) : FlxG.state;
 
                     for (j in 0...split.length)
                         args[i] = getVarInArray(lua, args[i], split[j].trim());
@@ -227,13 +227,13 @@ class LuaPresetUtils
 		switch(objectName)
 		{
 			case 'game':
-				return lua.type == STATE ? ScriptState.instance : ScriptSubState.instance;
+				return lua.type == STATE ? FlxG.state : ScriptSubState.instance;
 			
 			default:
 				var obj:Dynamic = lua.variables.get(objectName);
 
 				if (obj == null)
-                    obj = getVarInArray(lua, lua.type == STATE ? ScriptState.instance : ScriptSubState.instance, objectName, allowMaps);
+                    obj = getVarInArray(lua, lua.type == 'state' ? FlxG.state : FlxG.state.subState, objectName, allowMaps);
 
 				return obj;
 		}
@@ -242,5 +242,21 @@ class LuaPresetUtils
 	public static function formatVariable(tag:String)
     {
 		return tag.trim().replace(' ', '_').replace('.', '');
+    }
+
+    public static function cameraFromString(name:String):FlxCamera
+    {
+        var result:FlxCamera = switch (name)
+        {
+            case 'game', 'camera', 'camgame':
+                FlxG.cameras;
+            case 'hud', 'camhud':
+                FlxG.state.camHUD;
+        };
+
+        if (result == null)
+            return tagIs(name, FlxCamera) ? getTag(name) : null;
+        else
+            return result;
     }
 }
