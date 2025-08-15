@@ -25,3 +25,4 @@
 - *[DEPRECATED]* **doTweenAlpha** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
 - *[DEPRECATED]* **doTweenZoom** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
 - *[DEPRECATED]* **doTweenColor** -> `(tag:String, vars:String, targetColor:String, duration:Float, ease:String)`
+- *[DEPRECATED]* **startTween** -> `(tag:String, vars:String, values:Any = null, duration:Float, options:Any = null)`

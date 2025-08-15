@@ -38,3 +38,8 @@
 - *[REMOVED]* **luaTextExists** -> `(tag:String)`
 - *[REMOVED]* **startVideo** -> `(videoFile:String)`
 - *[REMOVED]* **close** -> `()`
+- *[REMOVED]* **getColorFromHex** -> `(color:String)`
+- *[REMOVED]* **addOffset** -> `(obj:String, anim:String, x:Float, y:Float)`
+- *[REMOVED]* **makeAnimatedLuaSprite** -> `(tag:String, ?image:String = null, ?x:Float = 0, ?y:Float = 0, ?spriteType:String = "sparrow")`
+- *[REMOVED]* **setScrollFactor** -> `(obj:String, scrollX:Float, scrollY:Float)`
+- *[REMOVED]* **scaleObject** -> `(obj:String, x:Float, y:Float, updateHitbox:Bool = true)`

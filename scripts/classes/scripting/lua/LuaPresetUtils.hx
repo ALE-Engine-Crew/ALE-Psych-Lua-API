@@ -246,10 +246,10 @@ class LuaPresetUtils
 
     public static function cameraFromString(name:String):FlxCamera
     {
-        var result:FlxCamera = switch (name)
+        var result:FlxCamera = switch (name.toLowerCase())
         {
             case 'game', 'camera', 'camgame':
-                FlxG.cameras;
+                FlxG.camera;
             case 'hud', 'camhud':
                 FlxG.state.camHUD;
         };

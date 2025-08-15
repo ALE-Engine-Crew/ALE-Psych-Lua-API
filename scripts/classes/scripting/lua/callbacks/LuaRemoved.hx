@@ -50,7 +50,11 @@ class LuaRemoved extends ScriptLuaPresetBase
 			'setHealthBarColors',
 			'setTimeBarColors',
 			'startVideo',
-			'close'
+			'close',
+			'getColorFromHex',
+			'addOffset',
+			'makeAnimatedLuaSprite',
+			'setScrollFactor'
 		])
 			set(name, () -> { errorPrint('"' + name + '" function was removed'); });
     }

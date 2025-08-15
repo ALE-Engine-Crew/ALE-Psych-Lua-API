@@ -90,50 +90,48 @@
 
 ---
 
-## Functions
+## Implemented Functions
 
-- **setVar** -> `(varName:String, value:Dynamic)`
-- **getVar** -> `(varName:String)`
-- **loadSong** -> `(?name:String = null, ?difficultyNum:Int = -1)`
 - **loadGraphic** -> `(variable:String, image:String, ?gridX:Int = 0, ?gridY:Int = 0)`
 - **loadFrames** -> `(variable:String, image:String, spriteType:String = "sparrow")`
 - **getObjectOrder** -> `(obj:String)`
 - **setObjectOrder** -> `(obj:String, position:Int)`
-- **startTween** -> `(tag:String, vars:String, values:Any = null, duration:Float, options:Any = null)`
 - **mouseClicked** -> `(button:String)`
 - **mousePressed** -> `(button:String)`
 - **mouseReleased** -> `(button:String)`
 - **cancelTween** -> `(tag:String)`
 - **runTimer** -> `(tag:String, time:Float = 1, loops:Int = 1)`
-- **cancelTimer** -> `(tag:String)`
 - **getColorFromName** -> `(color:String)`
 - **getColorFromString** -> `(color:String)`
-- **getColorFromHex** -> `(color:String)`
-- **precacheImage** -> `(name:String, ?allowGPU:Bool = true)`
 - **precacheSound** -> `(name:String)`
 - **precacheMusic** -> `(name:String)`
-- **triggerEvent** -> `(name:String, arg1:Dynamic, arg2:Dynamic)`
+- **makeLuaSprite** -> `(tag:String, ?image:String = null, ?x:Float = 0, ?y:Float = 0)`
+- **addAnimationByPrefix** -> `(obj:String, name:String, prefix:String, framerate:Int = 24, loop:Bool = true)`
+- **addAnimation** -> `(obj:String, name:String, frames:Array<Int>, framerate:Int = 24, loop:Bool = true)`
+- **addAnimationByIndices** -> `(obj:String, name:String, prefix:String, indices:Any, framerate:Int = 24, loop:Bool = false)`
+- **playAnim** -> `(obj:String, name:String, forced:Bool = false, ?reverse:Bool = false, ?startFrame:Int = 0)`
+- **updateHitbox** -> `(obj:String)`
+
+---
+
+## PlayState Functions
+
 - **startCountdown** -> `()`
 - **endSong** -> `()`
 - **restartSong** -> `(?skipTransition:Bool = false)`
 - **exitSong** -> `(?skipTransition:Bool = false)`
 - **cameraSetTarget** -> `(target:String)`
-- **cameraShake** -> `(camera:String, intensity:Float, duration:Float)`
-- **cameraFlash** -> `(camera:String, color:String, duration:Float,forced:Bool)`
-- **cameraFade** -> `(camera:String, color:String, duration:Float,forced:Bool)`
+- **triggerEvent** -> `(name:String, arg1:Dynamic, arg2:Dynamic)`
 - **characterDance** -> `(character:String)`
-- **makeLuaSprite** -> `(tag:String, ?image:String = null, ?x:Float = 0, ?y:Float = 0)`
-- **makeAnimatedLuaSprite** -> `(tag:String, ?image:String = null, ?x:Float = 0, ?y:Float = 0, ?spriteType:String = "sparrow")`
-- **makeGraphic** -> `(obj:String, width:Int = 256, height:Int = 256, color:String = 'FFFFFF')`
-- **addAnimationByPrefix** -> `(obj:String, name:String, prefix:String, framerate:Int = 24, loop:Bool = true)`
-- **addAnimation** -> `(obj:String, name:String, frames:Array<Int>, framerate:Int = 24, loop:Bool = true)`
-- **addAnimationByIndices** -> `(obj:String, name:String, prefix:String, indices:Any, framerate:Int = 24, loop:Bool = false)`
-- **playAnim** -> `(obj:String, name:String, forced:Bool = false, ?reverse:Bool = false, ?startFrame:Int = 0)`
-- **addOffset** -> `(obj:String, anim:String, x:Float, y:Float)`
-- **setScrollFactor** -> `(obj:String, scrollX:Float, scrollY:Float)`
-- **setGraphicSize** -> `(obj:String, x:Int, y:Int = 0, updateHitbox:Bool = true)`
-- **scaleObject** -> `(obj:String, x:Float, y:Float, updateHitbox:Bool = true)`
-- **updateHitbox** -> `(obj:String)`
+
+---
+
+## Functions
+
+- **setVar** -> `(varName:String, value:Dynamic)`
+- **getVar** -> `(varName:String)`
+- **loadSong** -> `(?name:String = null, ?difficultyNum:Int = -1)`
+
 - **updateHitboxFromGroup** -> `(group:String, index:Int)`
 - **setBlendMode** -> `(obj:String, blend:String = '')`
 - **screenCenter** -> `(obj:String, pos:String = 'xy')`
