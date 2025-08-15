@@ -27,5 +27,9 @@ class LuaPreset
         new scripting.lua.callbacks.LuaPaths(lua);
 
         new scripting.lua.callbacks.LuaCamera(lua);
+
+        new scripting.lua.callbacks.LuaObject(lua);
+
+        new scripting.lua.callbacks.LuaSound(lua);
     }
 }

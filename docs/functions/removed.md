@@ -43,3 +43,10 @@
 - *[REMOVED]* **makeAnimatedLuaSprite** -> `(tag:String, ?image:String = null, ?x:Float = 0, ?y:Float = 0, ?spriteType:String = "sparrow")`
 - *[REMOVED]* **setScrollFactor** -> `(obj:String, scrollX:Float, scrollY:Float)`
 - *[REMOVED]* **scaleObject** -> `(obj:String, x:Float, y:Float, updateHitbox:Bool = true)`
+- *[REMOVED]* **updateHitboxFromGroup** -> `(group:String, index:Int)`
+- *[REMOVED]* **getSoundVolume** -> `(tag:String)`
+- *[REMOVED]* **setSoundVolume** -> `(tag:String, value:Float)`
+- *[REMOVED]* **getSoundTime** -> `(tag:String)`
+- *[REMOVED]* **setSoundTime** -> `(tag:String, value:Float)`
+- *[REMOVED]* **getSoundPitch** -> `(tag:String)`
+- *[REMOVED]* **setSoundPitch** -> `(tag:String, value:Float, doPause:Bool = false)`

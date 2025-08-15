@@ -2,6 +2,13 @@ package scripting.lua.callbacks;
 
 import scripting.haxe.ScriptLuaPresetBase;
 
+import openfl.display.BlendMode;
+
+import flixel.util.FlxColor;
+
+using StringTools;
+
+@:access(openfl.display.BlendMode)
 class LuaSprite extends ScriptLuaPresetBase
 {
     override public function new(lua:LuaScript)
@@ -79,6 +86,20 @@ class LuaSprite extends ScriptLuaPresetBase
         {
             if (tagIs(tag, FlxSprite))
                 getTag(tag).updateHitbox();
+        });
+
+        set('setBlendMode', function(tag:String, mode:String)
+        {
+            if (tagIs(tag, FlxSprite))
+                getTag(tag).blend = BlendMode.fromString(mode.trim().toLowerCase());
+        });
+
+        set('getPixelColor', function(tag:String, x:Int, y:Int)
+        {
+            if (tagIs(tag, FlxSprite))
+                return getTag(tag).pixels.getPixel32(x, y);
+
+            return FlxColor.BLACK;
         });
     }
 }

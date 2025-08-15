@@ -24,5 +24,11 @@ class LuaBasic extends ScriptLuaPresetBase
 
             getTag(tag).cameras = foundCameras;
         });
+
+        set('objectsOverlap', function(tag0:String, tag1:String)
+        {
+            if (tagIs(tag0, FlxBasic) && tagIs(tag0, FlxBasic))
+                FlxG.overlap(getTag(tag0), getTag(tag1));
+        });
     }
 }
