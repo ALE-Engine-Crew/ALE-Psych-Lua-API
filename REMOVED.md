@@ -1,0 +1,40 @@
+## Removed Functions
+
+- *[REMOVED]* **getRunningScripts** -> `()`
+- *[REMOVED]* **callScript** -> `(luaFile:String, funcName:String, ?args:Array<Dynamic> = null)`
+- *[REMOVED]* **getGlobalFromScript** -> `(luaFile:String, global:String)`
+- *[REMOVED]* **setGlobalFromScript** -> `(luaFile:String, global:String, val:Dynamic)`
+- *[REMOVED]* **getGlobals** -> `(luaFile:String)`
+- *[REMOVED]* **isRunning** -> `(luaFile:String)`
+- *[REMOVED]* **addLuaScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false)`
+- *[REMOVED]* **addHScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false)`
+- *[REMOVED]* **removeLuaScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false)`
+- *[REMOVED]* **removeHScript** -> `(luaFile:String, ?ignoreAlreadyRunning:Bool = false)`
+- *[REMOVED]* **addScore** -> `(value:Int = 0)`
+- *[REMOVED]* **addMisses** -> `(value:Int = 0)`
+- *[REMOVED]* **addHits** -> `(value:Int = 0)`
+- *[REMOVED]* **setScore** -> `(value:Int = 0)`
+- *[REMOVED]* **setMisses** -> `(value:Int = 0)`
+- *[REMOVED]* **setHits** -> `(value:Int = 0)`
+- *[REMOVED]* **getScore** -> `()`
+- *[REMOVED]* **getMisses** -> `()`
+- *[REMOVED]* **getHits** -> `()`
+- *[REMOVED]* **setHealth** -> `(value:Float = 0)`
+- *[REMOVED]* **addHealth** -> `(value:Float = 0)`
+- *[REMOVED]* **getHealth** -> `()`
+- *[REMOVED]* **addCharacterToList** -> `(name:String, type:String)`
+- *[REMOVED]* **getSongPosition** -> `()`
+- *[REMOVED]* **getCharacterX** -> `(type:String)`
+- *[REMOVED]* **setCharacterX** -> `(type:String, value:Float)`
+- *[REMOVED]* **getCharacterY** -> `(type:String)`
+- *[REMOVED]* **setCharacterY** -> `(type:String, value:Float)`
+- *[REMOVED]* **setRatingPercent** -> `(value:Float)`
+- *[REMOVED]* **setRatingName** -> `(value:String)`
+- *[REMOVED]* **setRatingFC** -> `(value:String)`
+- *[REMOVED]* **luaSoundExists** -> `(tag:String)`
+- *[REMOVED]* **setHealthBarColors** -> `(left:String, right:String)`
+- *[REMOVED]* **setTimeBarColors** -> `(left:String, right:String)`
+- *[REMOVED]* **luaSpriteExists** -> `(tag:String)`
+- *[REMOVED]* **luaTextExists** -> `(tag:String)`
+- *[REMOVED]* **startVideo** -> `(videoFile:String)`
+- *[REMOVED]* **close** -> `()`

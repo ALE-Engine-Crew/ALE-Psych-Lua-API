@@ -1,0 +1,27 @@
+## Deprecated Functions
+
+- *[DEPRECATED]* **getModSetting** -> `(saveTag:String, ?modName:String = null)`
+- *[DEPRECATED]* **removeLuaSprite** -> `(tag:String, destroy:Bool = true)`
+- *[DEPRECATED]* **setObjectCamera** -> `(obj:String, camera:String = '')`
+- *[DEPRECATED]* **addLuaSprite** -> `(tag:String, front:Bool = false)`
+- *[DEPRECATED]* **screenWidth** -> `FlxG.width`
+- *[DEPRECATED]* **screenHeight** -> `FlxG.height`
+- *[DEPRECATED]* **getMouseX** -> `(camera:String)`
+- *[DEPRECATED]* **getMouseY** -> `(camera:String)`
+- *[DEPRECATED]* **getMidpointX** -> `(variable:String)`
+- *[DEPRECATED]* **getMidpointY** -> `(variable:String)`
+- *[DEPRECATED]* **getGraphicMidpointX** -> `(variable:String)`
+- *[DEPRECATED]* **getGraphicMidpointY** -> `(variable:String)`
+- *[DEPRECATED]* **getScreenPositionX** -> `(variable:String, ?camera:String)`
+- *[DEPRECATED]* **getScreenPositionY** -> `(variable:String, ?camera:String)`
+- *[DEPRECATED]* **noteTweenX** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenY** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenAngle** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenDirection** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenAlpha** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **doTweenX** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **doTweenY** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **doTweenAngle** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **doTweenAlpha** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **doTweenZoom** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **doTweenColor** -> `(tag:String, vars:String, targetColor:String, duration:Float, ease:String)`
