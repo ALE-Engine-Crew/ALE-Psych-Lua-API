@@ -198,59 +198,59 @@
 
 ### Extra
 
-"keyboardJustPressed", function(name:String)
-"keyboardPressed", function(name:String)
-"keyboardReleased", function(name:String)
-"anyGamepadJustPressed", function(name:String)
-"anyGamepadPressed", function(name:String)
-"anyGamepadReleased", function(name:String)
-"gamepadAnalogX", function(id:Int, ?leftStick:Bool = true)
-"gamepadAnalogY", function(id:Int, ?leftStick:Bool = true)
-"gamepadJustPressed", function(id:Int, name:String)
-"gamepadPressed", function(id:Int, name:String)
-"gamepadReleased", function(id:Int, name:String)
-"keyJustPressed", function(name:String = '')
-"keyPressed", function(name:String = '')
-"keyReleased", function(name:String = '')
-"initSaveData", function(name:String, ?folder:String = 'psychenginemods')
-"flushSaveData", function(name:String)
-"getDataFromSave", function(name:String, field:String, ?defaultValue:Dynamic = null)
-"setDataFromSave", function(name:String, field:String, value:Dynamic)
-"eraseSaveData", function(name:String)
-"checkFileExists", function(filename:String, ?absolute:Bool = false)
-"saveFile", function(path:String, content:String, ?absolute:Bool = false)
-"deleteFile", function(path:String, ?ignoreModFolders:Bool = false)
-"getTextFromFile", function(path:String, ?ignoreModFolders:Bool = false)
-"directoryFileList", function(folder:String)
-"stringStartsWith", function(str:String, start:String)
-"stringEndsWith", function(str:String, end:String)
-"stringSplit", function(str:String, split:String)
-"stringTrim", function(str:String)
-"getRandomInt", function(min:Int, max:Int = FlxMath.MAX_VALUE_INT, exclude:String = '')
-"getRandomFloat", function(min:Float, max:Float = 1, exclude:String = '')
-"getRandomBool", function(chance:Float = 50)
+- **keyboardJustPressed** -> `(name:String)`
+- **keyboardPressed** -> `(name:String)`
+- **keyboardReleased** -> `(name:String)`
+- **anyGamepadJustPressed** -> `(name:String)`
+- **anyGamepadPressed** -> `(name:String)`
+- **anyGamepadReleased** -> `(name:String)`
+- **gamepadAnalogX** -> `(id:Int, ?leftStick:Bool = true)`
+- **gamepadAnalogY** -> `(id:Int, ?leftStick:Bool = true)`
+- **gamepadJustPressed** -> `(id:Int, name:String)`
+- **gamepadPressed** -> `(id:Int, name:String)`
+- **gamepadReleased** -> `(id:Int, name:String)`
+- **keyJustPressed** -> `(name:String = '')`
+- **keyPressed** -> `(name:String = '')`
+- **keyReleased** -> `(name:String = '')`
+- **initSaveData** -> `(name:String, ?folder:String = 'psychenginemods')`
+- **flushSaveData** -> `(name:String)`
+- **getDataFromSave** -> `(name:String, field:String, ?defaultValue:Dynamic = null)`
+- **setDataFromSave** -> `(name:String, field:String, value:Dynamic)`
+- **eraseSaveData** -> `(name:String)`
+- **checkFileExists** -> `(filename:String, ?absolute:Bool = false)`
+- **saveFile** -> `(path:String, content:String, ?absolute:Bool = false)`
+- **deleteFile** -> `(path:String, ?ignoreModFolders:Bool = false)`
+- **getTextFromFile** -> `(path:String, ?ignoreModFolders:Bool = false)`
+- **directoryFileList** -> `(folder:String)`
+- **stringStartsWith** -> `(str:String, start:String)`
+- **stringEndsWith** -> `(str:String, end:String)`
+- **stringSplit** -> `(str:String, split:String)`
+- **stringTrim** -> `(str:String)`
+- **getRandomInt** -> `(min:Int, max:Int = FlxMath.MAX_VALUE_INT, exclude:String = '')`
+- **getRandomFloat** -> `(min:Float, max:Float = 1, exclude:String = '')`
+- **getRandomBool** -> `(chance:Float = 50)`
 
 ### Custom SubState
 
-"openCustomSubstate", function(name:String, ?pauseGame:Bool = false)
-"closeCustomSubstate", function()
-"insertToCustomSubstate", function(tag:String, ?pos:Int = -1)
+- **openCustomSubstate** -> `(name:String, ?pauseGame:Bool = false)`
+- **closeCustomSubstate** -> `()`
+- **insertToCustomSubstate** -> `(tag:String, ?pos:Int = -1)`
 
 ### Shader
 
-"initLuaShader", function(name:String, ?glslVersion:Int = 120)
-"setSpriteShader", function(obj:String, shader:String)
-"removeSpriteShader", function(obj:String)
-"getShaderBool", function(obj:String, prop:String)
-"getShaderBoolArray", function(obj:String, prop:String)
-"getShaderInt", function(obj:String, prop:String)
-"getShaderIntArray", function(obj:String, prop:String)
-"getShaderFloat", function(obj:String, prop:String)
-"getShaderFloatArray", function(obj:String, prop:String)
-"setShaderBool", function(obj:String, prop:String, value:Bool)
-"setShaderBoolArray", function(obj:String, prop:String, values:Dynamic)
-"setShaderInt", function(obj:String, prop:String, value:Int)
-"setShaderIntArray", function(obj:String, prop:String, values:Dynamic)
-"setShaderFloat", function(obj:String, prop:String, value:Float)
-"setShaderFloatArray", function(obj:String, prop:String, values:Dynamic)
-"setShaderSampler2D", function(obj:String, prop:String, bitmapdataPath:String)
+- **initLuaShader** -> `(name:String, ?glslVersion:Int = 120)`
+- **setSpriteShader** -> `(obj:String, shader:String)`
+- **removeSpriteShader** -> `(obj:String)`
+- **getShaderBool** -> `(obj:String, prop:String)`
+- **getShaderBoolArray** -> `(obj:String, prop:String)`
+- **getShaderInt** -> `(obj:String, prop:String)`
+- **getShaderIntArray** -> `(obj:String, prop:String)`
+- **getShaderFloat** -> `(obj:String, prop:String)`
+- **getShaderFloatArray** -> `(obj:String, prop:String)`
+- **setShaderBool** -> `(obj:String, prop:String, value:Bool)`
+- **setShaderBoolArray** -> `(obj:String, prop:String, values:Dynamic)`
+- **setShaderInt** -> `(obj:String, prop:String, value:Int)`
+- **setShaderIntArray** -> `(obj:String, prop:String, values:Dynamic)`
+- **setShaderFloat** -> `(obj:String, prop:String, value:Float)`
+- **setShaderFloatArray** -> `(obj:String, prop:String, values:Dynamic)`
+- **setShaderSampler2D** -> `(obj:String, prop:String, bitmapdataPath:String)`
