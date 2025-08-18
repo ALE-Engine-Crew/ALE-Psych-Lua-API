@@ -26,3 +26,7 @@
 - *[DEPRECATED]* **doTweenZoom** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
 - *[DEPRECATED]* **doTweenColor** -> `(tag:String, vars:String, targetColor:String, duration:Float, ease:String)`
 - *[DEPRECATED]* **startTween** -> `(tag:String, vars:String, values:Any = null, duration:Float, options:Any = null)`
+- *[DEPRECATED]* **setProperty** -> `(variable:String, value:Dynamic, allowMaps:Bool = false)`
+- *[DEPRECATED]* **setPropertyFromClass** -> `(classVar:String, variable:String, value:Dynamic, ?allowMaps:Bool = false)`
+- *[DEPRECATED]* **addLuaText** -> `(tag:String)`
+- *[DEPRECATED]* **removeLuaText** -> `(tag:String, destroy:Bool = true)`

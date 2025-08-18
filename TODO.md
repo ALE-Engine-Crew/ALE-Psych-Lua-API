@@ -121,6 +121,37 @@
 - **resumeSound** -> `(tag:String)`
 - **soundFadeIn** -> `(tag:String, duration:Float, fromValue:Float = 0, toValue:Float = 1)`
 - **soundFadeOut** -> `(tag:String, duration:Float, toValue:Float = 0)`
+- **changeDiscordClientID** -> `(?newID:String = null)`
+- **makeFlxAnimateSprite** -> `(tag:String, ?x:Float = 0, ?y:Float = 0, ?loadFolder:String = null)`
+- **loadAnimateAtlas** -> `(tag:String, folderOrImg:Dynamic, ?spriteJson:Dynamic = null, ?animationJson:Dynamic = null)`
+- **addAnimationBySymbolIndices** -> `(tag:String, name:String, symbol:String, ?indices:Any = null, ?framerate:Float = 24, ?loop:Bool = false, ?matX:Float = 0, ?matY:Float = 0)`
+- **getProperty** -> `(variable:String, ?allowMaps:Bool = false)`
+- **getPropertyFromClass** -> `(classVar:String, variable:String, ?allowMaps:Bool = false)`
+- **getPropertyFromGroup** -> `(obj:String, index:Int, variable:Dynamic, ?allowMaps:Bool = false)`
+- **setPropertyFromGroup** -> `(obj:String, index:Int, variable:Dynamic, value:Dynamic, ?allowMaps:Bool = false)`
+- **removeFromGroup** -> `(obj:String, index:Int, dontDestroy:Bool = false)`
+- **callMethod** -> `(funcToRun:String, ?args:Array<Dynamic> = null)`
+- **callMethodFromClass** -> `(className:String, funcToRun:String, ?args:Array<Dynamic> = null)`
+- **createInstance** -> `(variableToSave:String, className:String, ?args:Array<Dynamic> = null)`
+- **addInstance** -> `(objectName:String, ?inFront:Bool = false)`
+- **instanceArg** -> `(instanceName:String, ?className:String = null)`
+- **makeLuaText** -> `(tag:String, text:String, width:Int, x:Float, y:Float)`
+- **setTextFont** -> `(tag:String, newFont:String)`
+- **setSpriteShader** -> `(obj:String, shader:String)`
+- **removeSpriteShader** -> `(obj:String)`
+- **getShaderBool** -> `(obj:String, prop:String)`
+- **getShaderBoolArray** -> `(obj:String, prop:String)`
+- **getShaderInt** -> `(obj:String, prop:String)`
+- **getShaderIntArray** -> `(obj:String, prop:String)`
+- **getShaderFloat** -> `(obj:String, prop:String)`
+- **getShaderFloatArray** -> `(obj:String, prop:String)`
+- **setShaderBool** -> `(obj:String, prop:String, value:Bool)`
+- **setShaderBoolArray** -> `(obj:String, prop:String, values:Dynamic)`
+- **setShaderInt** -> `(obj:String, prop:String, value:Int)`
+- **setShaderIntArray** -> `(obj:String, prop:String, values:Dynamic)`
+- **setShaderFloat** -> `(obj:String, prop:String, value:Float)`
+- **setShaderFloatArray** -> `(obj:String, prop:String, values:Dynamic)`
+- **setShaderSampler2D** -> `(obj:String, prop:String, bitmapdataPath:String)`
 
 ---
 
@@ -143,58 +174,6 @@
 - **setVar** -> `(varName:String, value:Dynamic)`
 - **getVar** -> `(varName:String)`
 - **loadSong** -> `(?name:String = null, ?difficultyNum:Int = -1)`
-
-### Discord Client
-
-- **changeDiscordPresence** -> `(details:String, state:Null<String>, ?smallImageKey:String, ?hasStartTimestamp:Bool, ?endTimestamp:Float)`
-- **changeDiscordClientID** -> `(?newID:String = null)`
-
-### HScript
-
-- **runHaxeCode** -> `(codeToRun:String, ?varsToBring:Any = null, ?funcToRun:String = null, ?funcArgs:Array<Dynamic> = null)`
-- **runHaxeFunction** -> `(funcToRun:String, ?funcArgs:Array<Dynamic> = null)`
-- **addHaxeLibrary** -> `(libName:String, ?libPackage:String = '')`
-
-### FlxAnimate
-
-- **makeFlxAnimateSprite** -> `(tag:String, ?x:Float = 0, ?y:Float = 0, ?loadFolder:String = null)`
-- **loadAnimateAtlas** -> `(tag:String, folderOrImg:Dynamic, ?spriteJson:Dynamic = null, ?animationJson:Dynamic = null)`
-- **addAnimationBySymbolIndices** -> `(tag:String, name:String, symbol:String, ?indices:Any = null, ?framerate:Float = 24, ?loop:Bool = false, ?matX:Float = 0, ?matY:Float = 0)`
-
-### Reflection
-
-- **getProperty** -> `(variable:String, ?allowMaps:Bool = false)`
-- **setProperty** -> `(variable:String, value:Dynamic, allowMaps:Bool = false)`
-- **getPropertyFromClass** -> `(classVar:String, variable:String, ?allowMaps:Bool = false)`
-- **setPropertyFromClass** -> `(classVar:String, variable:String, value:Dynamic, ?allowMaps:Bool = false)`
-- **getPropertyFromGroup** -> `(obj:String, index:Int, variable:Dynamic, ?allowMaps:Bool = false)`
-- **setPropertyFromGroup** -> `(obj:String, index:Int, variable:Dynamic, value:Dynamic, ?allowMaps:Bool = false)`
-- **removeFromGroup** -> `(obj:String, index:Int, dontDestroy:Bool = false)`
-- **callMethod** -> `(funcToRun:String, ?args:Array<Dynamic> = null)`
-- **callMethodFromClass** -> `(className:String, funcToRun:String, ?args:Array<Dynamic> = null)`
-- **createInstance** -> `(variableToSave:String, className:String, ?args:Array<Dynamic> = null)`
-- **addInstance** -> `(objectName:String, ?inFront:Bool = false)`
-- **instanceArg** -> `(instanceName:String, ?className:String = null)`
-
-### Text
-
-- **makeLuaText** -> `(tag:String, text:String, width:Int, x:Float, y:Float)`
-- **setTextString** -> `(tag:String, text:String)`
-- **setTextSize** -> `(tag:String, size:Int)`
-- **setTextWidth** -> `(tag:String, width:Float)`
-- **setTextHeight** -> `(tag:String, height:Float)`
-- **setTextAutoSize** -> `(tag:String, value:Bool)`
-- **setTextBorder** -> `(tag:String, size:Float, color:String, ?style:String = 'outline')`
-- **setTextColor** -> `(tag:String, color:String)`
-- **setTextFont** -> `(tag:String, newFont:String)`
-- **setTextItalic** -> `(tag:String, italic:Bool)`
-- **setTextAlignment** -> `(tag:String, alignment:String = 'left')`
-- **getTextString** -> `(tag:String)`
-- **getTextSize** -> `(tag:String)`
-- **getTextFont** -> `(tag:String)`
-- **getTextWidth** -> `(tag:String)`
-- **addLuaText** -> `(tag:String)`
-- **removeLuaText** -> `(tag:String, destroy:Bool = true)`
 
 ### Extra
 
@@ -229,28 +208,3 @@
 - **getRandomInt** -> `(min:Int, max:Int = FlxMath.MAX_VALUE_INT, exclude:String = '')`
 - **getRandomFloat** -> `(min:Float, max:Float = 1, exclude:String = '')`
 - **getRandomBool** -> `(chance:Float = 50)`
-
-### Custom SubState
-
-- **openCustomSubstate** -> `(name:String, ?pauseGame:Bool = false)`
-- **closeCustomSubstate** -> `()`
-- **insertToCustomSubstate** -> `(tag:String, ?pos:Int = -1)`
-
-### Shader
-
-- **initLuaShader** -> `(name:String, ?glslVersion:Int = 120)`
-- **setSpriteShader** -> `(obj:String, shader:String)`
-- **removeSpriteShader** -> `(obj:String)`
-- **getShaderBool** -> `(obj:String, prop:String)`
-- **getShaderBoolArray** -> `(obj:String, prop:String)`
-- **getShaderInt** -> `(obj:String, prop:String)`
-- **getShaderIntArray** -> `(obj:String, prop:String)`
-- **getShaderFloat** -> `(obj:String, prop:String)`
-- **getShaderFloatArray** -> `(obj:String, prop:String)`
-- **setShaderBool** -> `(obj:String, prop:String, value:Bool)`
-- **setShaderBoolArray** -> `(obj:String, prop:String, values:Dynamic)`
-- **setShaderInt** -> `(obj:String, prop:String, value:Int)`
-- **setShaderIntArray** -> `(obj:String, prop:String, values:Dynamic)`
-- **setShaderFloat** -> `(obj:String, prop:String, value:Float)`
-- **setShaderFloatArray** -> `(obj:String, prop:String, values:Dynamic)`
-- **setShaderSampler2D** -> `(obj:String, prop:String, bitmapdataPath:String)`

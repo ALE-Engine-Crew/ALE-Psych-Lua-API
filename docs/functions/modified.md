@@ -7,3 +7,6 @@
 - *[MODIFIED]* **makeGraphic** -> `(obj:String, width:Int = 256, height:Int = 256, color:String = 'FFFFFF')`
 - *[MODIFIED]* **setGraphicSize** -> `(obj:String, x:Int, y:Int = 0, updateHitbox:Bool = true)`
 - *[MODIFIED]* **screenCenter** -> `(obj:String, pos:String = 'xy')`
+- [MODIFIED] **changeDiscordPresence** -> `(details:String, state:Null<String>, ?smallImageKey:String, ?hasStartTimestamp:Bool, ?endTimestamp:Float)`
+- *[MODIFIED]* **setTextBorder** -> `(tag:String, size:Float, color:String, ?style:String = 'outline')`
+- *[MODIFIED]* **initLuaShader** -> `(name:String, ?glslVersion:Int = 120)`

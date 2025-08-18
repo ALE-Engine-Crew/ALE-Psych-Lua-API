@@ -31,5 +31,13 @@ class LuaPreset
         new scripting.lua.callbacks.LuaObject(lua);
 
         new scripting.lua.callbacks.LuaSound(lua);
+
+        new scripting.lua.callbacks.LuaDiscord(lua);
+
+        new scripting.lua.callbacks.LuaAnimate(lua);
+
+        new scripting.lua.callbacks.LuaText(lua);
+
+        new scripting.lua.callbacks.LuaShader(lua);
     }
 }

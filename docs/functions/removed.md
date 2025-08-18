@@ -50,3 +50,21 @@
 - *[REMOVED]* **setSoundTime** -> `(tag:String, value:Float)`
 - *[REMOVED]* **getSoundPitch** -> `(tag:String)`
 - *[REMOVED]* **setSoundPitch** -> `(tag:String, value:Float, doPause:Bool = false)`
+- *[REMOVED]* **runHaxeCode** -> `(codeToRun:String, ?varsToBring:Any = null, ?funcToRun:String = null, ?funcArgs:Array<Dynamic> = null)`
+- *[REMOVED]* **runHaxeFunction** -> `(funcToRun:String, ?funcArgs:Array<Dynamic> = null)`
+- *[REMOVED]* **addHaxeLibrary** -> `(libName:String, ?libPackage:String = '')`
+- *[REMOVED]* **setTextItalic** -> `(tag:String, italic:Bool)`
+- *[REMOVED]* **setTextAlignment** -> `(tag:String, alignment:String = 'left')`
+- *[REMOVED]* **getTextString** -> `(tag:String)`
+- *[REMOVED]* **getTextSize** -> `(tag:String)`
+- *[REMOVED]* **getTextFont** -> `(tag:String)`
+- *[REMOVED]* **getTextWidth** -> `(tag:String)`
+- *[REMOVED]* **setTextString** -> `(tag:String, text:String)`
+- *[REMOVED]* **setTextSize** -> `(tag:String, size:Int)`
+- *[REMOVED]* **setTextWidth** -> `(tag:String, width:Float)`
+- *[REMOVED]* **setTextHeight** -> `(tag:String, height:Float)`
+- *[REMOVED]* **setTextAutoSize** -> `(tag:String, value:Bool)`
+- *[REMOVED]* **setTextColor** -> `(tag:String, color:String)`
+- *[REMOVED]* **openCustomSubstate** -> `(name:String, ?pauseGame:Bool = false)`
+- *[REMOVED]* **closeCustomSubstate** -> `()`
+- *[REMOVED]* **insertToCustomSubstate** -> `(tag:String, ?pos:Int = -1)`
