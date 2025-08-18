@@ -1,5 +1,7 @@
 package scripting.lua;
 
+import flixel.util.FlxSave;
+
 using StringTools;
 
 class LuaPresetUtils
@@ -254,9 +256,6 @@ class LuaPresetUtils
                 FlxG.state.camHUD;
         };
 
-        if (result == null)
-            return tagIs(name, FlxCamera) ? getTag(name) : null;
-        else
-            return result;
+        return result ?? (tagIs(name, FlxCamera) ? getTag(name) : null);
     }
 }

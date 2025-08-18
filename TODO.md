@@ -121,6 +121,7 @@
 - **resumeSound** -> `(tag:String)`
 - **soundFadeIn** -> `(tag:String, duration:Float, fromValue:Float = 0, toValue:Float = 1)`
 - **soundFadeOut** -> `(tag:String, duration:Float, toValue:Float = 0)`
+- **soundFadeCancel** -> `(tag:String)`
 - **changeDiscordClientID** -> `(?newID:String = null)`
 - **makeFlxAnimateSprite** -> `(tag:String, ?x:Float = 0, ?y:Float = 0, ?loadFolder:String = null)`
 - **loadAnimateAtlas** -> `(tag:String, folderOrImg:Dynamic, ?spriteJson:Dynamic = null, ?animationJson:Dynamic = null)`
@@ -152,6 +153,19 @@
 - **setShaderFloat** -> `(obj:String, prop:String, value:Float)`
 - **setShaderFloatArray** -> `(obj:String, prop:String, values:Dynamic)`
 - **setShaderSampler2D** -> `(obj:String, prop:String, bitmapdataPath:String)`
+- **keyboardJustPressed** -> `(name:String)`
+- **keyboardPressed** -> `(name:String)`
+- **keyboardReleased** -> `(name:String)`
+- **flushSaveData** -> `(name:String)`
+- **eraseSaveData** -> `(name:String)`
+- **directoryFileList** -> `(folder:String)`
+- **stringStartsWith** -> `(str:String, start:String)`
+- **stringEndsWith** -> `(str:String, end:String)`
+- **stringSplit** -> `(str:String, split:String)`
+- **stringTrim** -> `(str:String)`
+- **getRandomInt** -> `(min:Int, max:Int = FlxMath.MAX_VALUE_INT, exclude:String = '')`
+- **getRandomFloat** -> `(min:Float, max:Float = 1, exclude:String = '')`
+- **getRandomBool** -> `(chance:Float = 50)`
 
 ---
 
@@ -165,7 +179,6 @@
 - **triggerEvent** -> `(name:String, arg1:Dynamic, arg2:Dynamic)`
 - **characterDance** -> `(character:String)`
 - **startDialogue** -> `(dialogueFile:String, music:String = null)`
-- **soundFadeCancel** -> `(tag:String)`
 
 ---
 
@@ -174,37 +187,3 @@
 - **setVar** -> `(varName:String, value:Dynamic)`
 - **getVar** -> `(varName:String)`
 - **loadSong** -> `(?name:String = null, ?difficultyNum:Int = -1)`
-
-### Extra
-
-- **keyboardJustPressed** -> `(name:String)`
-- **keyboardPressed** -> `(name:String)`
-- **keyboardReleased** -> `(name:String)`
-- **anyGamepadJustPressed** -> `(name:String)`
-- **anyGamepadPressed** -> `(name:String)`
-- **anyGamepadReleased** -> `(name:String)`
-- **gamepadAnalogX** -> `(id:Int, ?leftStick:Bool = true)`
-- **gamepadAnalogY** -> `(id:Int, ?leftStick:Bool = true)`
-- **gamepadJustPressed** -> `(id:Int, name:String)`
-- **gamepadPressed** -> `(id:Int, name:String)`
-- **gamepadReleased** -> `(id:Int, name:String)`
-- **keyJustPressed** -> `(name:String = '')`
-- **keyPressed** -> `(name:String = '')`
-- **keyReleased** -> `(name:String = '')`
-- **initSaveData** -> `(name:String, ?folder:String = 'psychenginemods')`
-- **flushSaveData** -> `(name:String)`
-- **getDataFromSave** -> `(name:String, field:String, ?defaultValue:Dynamic = null)`
-- **setDataFromSave** -> `(name:String, field:String, value:Dynamic)`
-- **eraseSaveData** -> `(name:String)`
-- **checkFileExists** -> `(filename:String, ?absolute:Bool = false)`
-- **saveFile** -> `(path:String, content:String, ?absolute:Bool = false)`
-- **deleteFile** -> `(path:String, ?ignoreModFolders:Bool = false)`
-- **getTextFromFile** -> `(path:String, ?ignoreModFolders:Bool = false)`
-- **directoryFileList** -> `(folder:String)`
-- **stringStartsWith** -> `(str:String, start:String)`
-- **stringEndsWith** -> `(str:String, end:String)`
-- **stringSplit** -> `(str:String, split:String)`
-- **stringTrim** -> `(str:String)`
-- **getRandomInt** -> `(min:Int, max:Int = FlxMath.MAX_VALUE_INT, exclude:String = '')`
-- **getRandomFloat** -> `(min:Float, max:Float = 1, exclude:String = '')`
-- **getRandomBool** -> `(chance:Float = 50)`

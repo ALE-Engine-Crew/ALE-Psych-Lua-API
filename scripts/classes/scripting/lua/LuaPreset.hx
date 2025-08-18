@@ -39,5 +39,13 @@ class LuaPreset
         new scripting.lua.callbacks.LuaText(lua);
 
         new scripting.lua.callbacks.LuaShader(lua);
+
+        new scripting.lua.callbacks.LuaKeyManager(lua);
+
+        new scripting.lua.callbacks.LuaSave(lua);
+
+        new scripting.lua.callbacks.LuaFileSystem(lua);
+
+        new scripting.lua.callbacks.LuaStringTools(lua);
     }
 }

@@ -10,3 +10,12 @@
 - [MODIFIED] **changeDiscordPresence** -> `(details:String, state:Null<String>, ?smallImageKey:String, ?hasStartTimestamp:Bool, ?endTimestamp:Float)`
 - *[MODIFIED]* **setTextBorder** -> `(tag:String, size:Float, color:String, ?style:String = 'outline')`
 - *[MODIFIED]* **initLuaShader** -> `(name:String, ?glslVersion:Int = 120)`
+- *[MODIFIED]* **keyJustPressed** -> `(name:String = '')`
+- *[MODIFIED]* **keyPressed** -> `(name:String = '')`
+- *[MODIFIED]* **keyReleased** -> `(name:String = '')`
+- *[MODIFIED]* **getDataFromSave** -> `(name:String, field:String, ?defaultValue:Dynamic = null)`
+- *[MODIFIED]* **setDataFromSave** -> `(name:String, field:String, value:Dynamic)`
+- *[MODIFIED]* **checkFileExists** -> `(filename:String, ?absolute:Bool = false)`
+- *[MODIFIED]* **saveFile** -> `(path:String, content:String, ?absolute:Bool = false)`
+- *[MODIFIED]* **deleteFile** -> `(path:String, ?ignoreModFolders:Bool = false)`
+- *[MODIFIED]* **getTextFromFile** -> `(path:String, ?ignoreModFolders:Bool = false)`

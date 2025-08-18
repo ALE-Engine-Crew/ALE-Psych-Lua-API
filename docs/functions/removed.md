@@ -68,3 +68,12 @@
 - *[REMOVED]* **openCustomSubstate** -> `(name:String, ?pauseGame:Bool = false)`
 - *[REMOVED]* **closeCustomSubstate** -> `()`
 - *[REMOVED]* **insertToCustomSubstate** -> `(tag:String, ?pos:Int = -1)`
+- *[REMOVED]* **anyGamepadJustPressed** -> `(name:String)`
+- *[REMOVED]* **anyGamepadPressed** -> `(name:String)`
+- *[REMOVED]* **anyGamepadReleased** -> `(name:String)`
+- *[REMOVED]* **gamepadAnalogX** -> `(id:Int, ?leftStick:Bool = true)`
+- *[REMOVED]* **gamepadAnalogY** -> `(id:Int, ?leftStick:Bool = true)`
+- *[REMOVED]* **gamepadJustPressed** -> `(id:Int, name:String)`
+- *[REMOVED]* **gamepadPressed** -> `(id:Int, name:String)`
+- *[REMOVED]* **gamepadReleased** -> `(id:Int, name:String)`
+- *[REMOVED]* **initSaveData** -> `(name:String, ?folder:String = 'psychenginemods')`

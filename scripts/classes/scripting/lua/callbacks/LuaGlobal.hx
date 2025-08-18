@@ -58,5 +58,20 @@ class LuaGlobal extends ScriptLuaPresetBase
                 FlxG.state.subState.insert(position, object);
             }
         });
+
+        set('getRandomInt', function(?min:Int, ?max:Int, ?excludes:Array<Int>)
+        {
+            return FlxG.random.int(min, max, excludes);
+        });
+
+        set('getRandomFloat', function(?min:Float, ?max:Float, ?excludes:Array<Float>)
+        {
+            return FlxG.random.float(min, max, excludes);
+        });
+
+        set('getRandomBool', function(?chance:Float)
+        {
+            return FlxG.random.bool(chance);
+        });
     }
 }
