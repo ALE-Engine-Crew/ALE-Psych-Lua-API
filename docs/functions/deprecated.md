@@ -1,32 +1,25 @@
 ## Deprecated Functions
 
-- *[DEPRECATED]* **getModSetting** -> `(saveTag:String, ?modName:String = null)`
-- *[DEPRECATED]* **removeLuaSprite** -> `(tag:String, destroy:Bool = true)`
-- *[DEPRECATED]* **setObjectCamera** -> `(obj:String, camera:String = '')`
-- *[DEPRECATED]* **addLuaSprite** -> `(tag:String, front:Bool = false)`
-- *[DEPRECATED]* **screenWidth** -> `FlxG.width`
-- *[DEPRECATED]* **screenHeight** -> `FlxG.height`
-- *[DEPRECATED]* **getMouseX** -> `(camera:String)`
-- *[DEPRECATED]* **getMouseY** -> `(camera:String)`
-- *[DEPRECATED]* **getMidpointX** -> `(variable:String)`
-- *[DEPRECATED]* **getMidpointY** -> `(variable:String)`
-- *[DEPRECATED]* **getGraphicMidpointX** -> `(variable:String)`
-- *[DEPRECATED]* **getGraphicMidpointY** -> `(variable:String)`
-- *[DEPRECATED]* **getScreenPositionX** -> `(variable:String, ?camera:String)`
-- *[DEPRECATED]* **getScreenPositionY** -> `(variable:String, ?camera:String)`
-- *[DEPRECATED]* **noteTweenX** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
-- *[DEPRECATED]* **noteTweenY** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
-- *[DEPRECATED]* **noteTweenAngle** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
-- *[DEPRECATED]* **noteTweenDirection** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
-- *[DEPRECATED]* **noteTweenAlpha** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **addLuaSprite** -> `(tag:String, front:Bool = false)` >>> **add**
+- *[DEPRECATED]* **removeLuaSprite** -> `(tag:String, destroy:Bool = true)` >>> **remove**
+- *[DEPRECATED]* **setObjectCamera** -> `(obj:String, camera:String = '')` >>> **setObjectCameras**
+
+- **getMouseX** -> `(camera:String)`
+- **getMouseY** -> `(camera:String)`
+- **getMidpointX** -> `(variable:String)`
+- **getMidpointY** -> `(variable:String)`
+- **getGraphicMidpointX** -> `(variable:String)`
+- **getGraphicMidpointY** -> `(variable:String)`
+- **getScreenPositionX** -> `(variable:String, ?camera:String)`
+- **getScreenPositionY** -> `(variable:String, ?camera:String)`
+
 - *[DEPRECATED]* **doTweenX** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
 - *[DEPRECATED]* **doTweenY** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
 - *[DEPRECATED]* **doTweenAngle** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
 - *[DEPRECATED]* **doTweenAlpha** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
 - *[DEPRECATED]* **doTweenZoom** -> `(tag:String, vars:String, value:Dynamic, duration:Float, ease:String)`
 - *[DEPRECATED]* **doTweenColor** -> `(tag:String, vars:String, targetColor:String, duration:Float, ease:String)`
-- *[DEPRECATED]* **startTween** -> `(tag:String, vars:String, values:Any = null, duration:Float, options:Any = null)`
-- *[DEPRECATED]* **setProperty** -> `(variable:String, value:Dynamic, allowMaps:Bool = false)`
-- *[DEPRECATED]* **setPropertyFromClass** -> `(classVar:String, variable:String, value:Dynamic, ?allowMaps:Bool = false)`
+- *[REMOVED]* **startTween** -> `(tag:String, vars:String, values:Any = null, duration:Float, options:Any = null)`
+
 - *[DEPRECATED]* **addLuaText** -> `(tag:String)`
 - *[DEPRECATED]* **removeLuaText** -> `(tag:String, destroy:Bool = true)`

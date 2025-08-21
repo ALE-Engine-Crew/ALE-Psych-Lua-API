@@ -101,5 +101,27 @@ class LuaSprite extends ScriptLuaPresetBase
 
             return FlxColor.BLACK;
         });
+
+        set('addLuaSprite', function(tag:String)
+        {
+            deprecatedPrint('Use "add" instead of "addLuaSprite"');
+
+            if (tagIs(tag, FlxSprite))
+                if (type == 'state')
+                    FlxG.state.add(getTag(tag));
+                else
+                    FlxG.state.subState.add(getTag(tag));
+        });
+
+        set('removeLuaSprite', function(tag:String, ?destroy:Bool)
+        {
+            deprecatedPrint('Use "remove" instead of "removeLuaSprite"');
+
+            if (tagIs(tag, FlxSprite))
+                if (type == 'state')
+                    FlxG.state.remove(getTag(tag), destroy);
+                else
+                    FlxG.state.subState.remove(getTag(tag), destroy);
+        });
     }
 }

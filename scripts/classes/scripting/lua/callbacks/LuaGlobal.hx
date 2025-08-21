@@ -19,13 +19,13 @@ class LuaGlobal extends ScriptLuaPresetBase
                     FlxG.state.subState.add(getTag(tag));
         });
 
-        set('remove', function(tag:String)
+        set('remove', function(tag:String, ?destroy:Bool)
         {
             if (tagIs(tag, FlxBasic))
                 if (type == 'state')
-                    FlxG.state.remove(getTag(tag));
+                    FlxG.state.remove(getTag(tag), destroy);
                 else
-                    FlxG.state.subState.remove(getTag(tag));
+                    FlxG.state.subState.remove(getTag(tag), destroy);
         });
 
         set('insert', function(position:Int, tag:String)

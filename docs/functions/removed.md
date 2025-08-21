@@ -77,3 +77,4 @@
 - *[REMOVED]* **gamepadPressed** -> `(id:Int, name:String)`
 - *[REMOVED]* **gamepadReleased** -> `(id:Int, name:String)`
 - *[REMOVED]* **initSaveData** -> `(name:String, ?folder:String = 'psychenginemods')`
+- *[REMOVED]* **getModSetting** -> `(saveTag:String, ?modName:String = null)`

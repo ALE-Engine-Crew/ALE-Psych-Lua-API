@@ -12,6 +12,14 @@ class LuaBasic extends ScriptLuaPresetBase
     {
         super(lua);
 
+        set('setObjectCamera', function(tag:String, camera:String)
+        {
+            deprecatedPrint('Use "setObjectCameras" instead of "setObjectCamera"');
+
+            if (tagIs(tag, FlxBasic))
+                getTag(tag).cameras = [LuaPresetUtils.cameraFromString(camera)];
+        });
+
         set('setObjectCameras', function(tag:String, cameras:Array<String>)
         {
             if (!tagIs(tag, FlxBasic))

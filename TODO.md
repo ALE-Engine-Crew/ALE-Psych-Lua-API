@@ -87,11 +87,15 @@
 - **splashSkinPostfix** -> `NoteSplash.getSplashSkinPostfix()`
 - **splashAlpha** -> `ClientPrefs.data.splashAlpha`
 - **buildTarget** -> `LuaUtils.getBuildTarget()`
+- **screenWidth** -> `FlxG.width`
+- **screenHeight** -> `FlxG.height`
 
 ---
 
 ## Implemented Functions
 
+- **setProperty** -> `(variable:String, value:Dynamic, allowMaps:Bool = false)`
+- **setPropertyFromClass** -> `(classVar:String, variable:String, value:Dynamic, ?allowMaps:Bool = false)`
 - **loadGraphic** -> `(variable:String, image:String, ?gridX:Int = 0, ?gridY:Int = 0)`
 - **loadFrames** -> `(variable:String, image:String, spriteType:String = "sparrow")`
 - **getObjectOrder** -> `(obj:String)`
@@ -106,6 +110,7 @@
 - **precacheSound** -> `(name:String)`
 - **precacheMusic** -> `(name:String)`
 - **makeLuaSprite** -> `(tag:String, ?image:String = null, ?x:Float = 0, ?y:Float = 0)`
+- **makeGraphic** -> `(tag:String, x:Float, y:Float, ?color:FlxColor)`
 - **addAnimationByPrefix** -> `(obj:String, name:String, prefix:String, framerate:Int = 24, loop:Bool = true)`
 - **addAnimation** -> `(obj:String, name:String, frames:Array<Int>, framerate:Int = 24, loop:Bool = true)`
 - **addAnimationByIndices** -> `(obj:String, name:String, prefix:String, indices:Any, framerate:Int = 24, loop:Bool = false)`
@@ -179,6 +184,11 @@
 - **triggerEvent** -> `(name:String, arg1:Dynamic, arg2:Dynamic)`
 - **characterDance** -> `(character:String)`
 - **startDialogue** -> `(dialogueFile:String, music:String = null)`
+- *[DEPRECATED]* **noteTweenX** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenY** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenAngle** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenDirection** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
+- *[DEPRECATED]* **noteTweenAlpha** -> `(tag:String, note:Int, value:Dynamic, duration:Float, ease:String)`
 
 ---
 
